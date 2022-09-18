@@ -1,0 +1,23 @@
+{% extends "base.jinja2" %}
+
+{% block title %} <title>Sign In</title> {% endblock title %}
+
+{% block main%}
+
+    <form action="/internal/signin" method="post">
+
+        <input type="text" name="username" placeholder="username">
+
+        <br>
+        <br>
+
+        <input type="password" name="password" placeholder="password">
+
+        <br>
+        <br>
+
+        <button type="submit">Sign In</button>
+
+    </form>
+
+{% endblock main%}

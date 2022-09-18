@@ -1,0 +1,31 @@
+{% extends "base.jinja2"%}
+
+{% block title%} <title>{{ user.username }}</title> {% endblock title%}
+
+{% block main%}
+
+    {% if user %}
+
+        <h2> {{ user.username }} </h2>
+
+        <br>
+        <br>
+        
+        <div class="post">
+            {% for post in user.posts %}
+                {% if post.deleted is defined %}
+                
+                    <a href="/view/{{ post.id_ }}"> {{ post.title }} </a>
+                    <br>
+
+                {% endif %}
+            {% endfor %}
+        </div>
+
+    {% else %}
+
+        <h2> User not found </h2>
+
+    {% endif %}
+
+{% endblock main%}

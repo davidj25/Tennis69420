@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="/static/base.css">
+    
+    {% block title %}
+    {% endblock title %}
+
+</head>
+<body>
+
+    <nav>
+
+        <div>
+            <a href="/"><h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Home </h2></a>
+        </div>
+
+        <div>
+            <a href="/signin"><h2>Sign In </h2></a>
+            <a href="/register"><h2 style> &nbsp;&nbsp;Register&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </h2></a>
+        </div>
+
+    </nav>
+
+    <br>
+    <br>
+
+    {% block main %}
+    {% endblock main%}
+
+</body>
+</html>

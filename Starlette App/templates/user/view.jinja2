@@ -1,0 +1,35 @@
+{% extends "base.jinja2"%}
+
+{% block title %} <title>{{post.title}}</title> {% endblock title%}
+
+{% block main%}
+    
+    {% if post and post.deleted == False %}
+
+        <h2> {{ post.title }}</h2>
+
+        <a href="/profile/{{ post.user.id_ }}"> By: {{ post.user.username }} </a>
+
+        <br>
+        <br>
+
+
+        <div class="text">
+        
+            <p> {{ post.text }} </p>
+
+        </div>
+
+        <br>
+        <br>
+
+        {% block tools %}
+        {% endblock tools %}
+    
+    {% else %}
+
+        <h2> Post not found </h2>
+
+    {% endif %}
+
+{% endblock main%}

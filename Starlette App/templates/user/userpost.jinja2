@@ -1,0 +1,11 @@
+{% extends "view.jinja2"%}
+
+{% block tools %}
+
+    <a href="/delete/{{ post.id_ }}"> Delete</a>
+
+    &nbsp;&nbsp;
+
+    <a href="/edit/{{ post.id_ }}"> Edit</a>
+
+{% endblock tools %}
